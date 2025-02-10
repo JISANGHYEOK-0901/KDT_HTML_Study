@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float와 Clear</title>
+    <style>
+      /* 블록 요소는 가로를 돌점한다 */
+      /* float을 사용하면 독점을 해제할 수 있다. */
+      div {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        line-height: 100px;
+        text-align: center;
+        background-color: cyan;
+      }
+
+      .float-box {
+        float: left;
+      }
+      .float-box:nth-last-child(4n + 1) {
+        clear: left;
+      }
+
+      .float-box2 {
+        float: right;
+      }
+      .float-box2:nth-last-child(4n + 1) {
+        clear: right;
+      }
+
+      .fix-box {
+        background-color: rgb(255, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="float-box">1</div>
+    <div class="float-box">2</div>
+    <div class="float-box">3</div>
+    <div class="float-box">4</div>
+    <div class="float-box">5</div>
+    <div class="float-box">6</div>
+    <div class="float-box">7</div>
+    <div class="float-box">8</div>
+    <div class="float-box">9</div>
+    <div class="float-box">10</div>
+    <div class="float-box">11</div>
+    <div class="float-box">12</div>
+
+    <div class="float-box2">1</div>
+    <div class="float-box2">2</div>
+    <div class="float-box2">3</div>
+    <div class="float-box2">4</div>
+    <div class="float-box2">5</div>
+    <div class="float-box2">6</div>
+    <div class="float-box2">7</div>
+    <div class="float-box2">8</div>
+    <div class="float-box2">9</div>
+    <div class="float-box2">10</div>
+    <div class="float-box2">11</div>
+    <div class="float-box2">12</div>
+  </body>
+</html>
